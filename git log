@@ -1,0 +1,370 @@
+[33mcommit a5ab3134f14588876e8e431e21eba29314c4e75d[m[33m ([m[1;36mHEAD -> [m[1;32mmain[m[33m, [m[1;31morigin/main[m[33m, [m[1;31morigin/HEAD[m[33m)[m
+Author: Pedro Guerrero <pjgm_18@hotmail.com>
+Date:   Fri Jan 21 15:33:24 2022 -0500
+
+    Segundo taller de JS
+
+[1mdiff --git a/README.md b/README.md[m
+[1mindex 8d7890a..b99d446 100644[m
+[1m--- a/README.md[m
+[1m+++ b/README.md[m
+[36m@@ -1 +1,18 @@[m
+[31m-# curso-practico-JS[m
+\ No newline at end of file[m
+[32m+[m[32m# curso-practico-JS[m
+[32m+[m
+[32m+[m
+[32m+[m[32m....[m
+[32m+[m
+[32m+[m[32m## Taller #1 figuras geometricas[m
+[32m+[m
+[32m+[m[32m-Primer paso: definir las formulas[m
+[32m+[m[32m-Segundo paso: implementar las formulas en JavaScript[m
+[32m+[m[32m-Tercer paso: crear funciones[m
+[32m+[m[32m-Cuarto paso: Integrar JS con HTML[m
+[32m+[m
+[32m+[m[32m## Taller #2 porcentajes y descuentos[m
+[32m+[m
+[32m+[m[32m-Primer paso: definir las formulas[m
+[32m+[m[32m-Segundo paso: implementar las formulas en JavaScript[m
+[32m+[m[32m-Tercer paso: crear funciones[m
+[32m+[m[32m-Cuarto paso: Integrar JS con HTML[m
+\ No newline at end of file[m
+[1mdiff --git a/descuentos.html b/descuentos.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..f325c6b[m
+[1m--- /dev/null[m
+[1m+++ b/descuentos.html[m
+[36m@@ -0,0 +1,14 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Porcentajes y descuentos</title>[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <h1>Porcentajes y descuentos</h1>[m
+[32m+[m
+[32m+[m[32m    <script src="./descuentos.js"></script>[m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/descuentos.js b/descuentos.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..e69de29[m
+[1mdiff --git a/figuras.html b/figuras.html[m
+[1mnew file mode 100644[m
+[1mindex 0000000..8dfa7fd[m
+[1m--- /dev/null[m
+[1m+++ b/figuras.html[m
+[36m@@ -0,0 +1,106 @@[m
+[32m+[m[32m<!DOCTYPE html>[m
+[32m+[m[32m<html lang="en">[m
+[32m+[m[32m<head>[m
+[32m+[m[32m    <meta charset="UTF-8">[m
+[32m+[m[32m    <meta http-equiv="X-UA-Compatible" content="IE=edge">[m
+[32m+[m[32m    <meta name="viewport" content="width=device-width, initial-scale=1.0">[m
+[32m+[m[32m    <title>Figuras geometricas</title>[m
+[32m+[m[32m    <style>[m
+[32m+[m[32m        .formulario{[m
+[32m+[m
+[32m+[m[32m            display: flex;[m
+[32m+[m[32m            flex-direction: column;[m
+[32m+[m[32m            width: 300px;[m
+[32m+[m
+[32m+[m[32m        }[m
+[32m+[m[32m        .label{[m
+[32m+[m[32m            text-align: center;[m
+[32m+[m[32m     }[m
+[32m+[m[32m    </style>[m
+[32m+[m[32m</head>[m
+[32m+[m[32m<body>[m
+[32m+[m[32m    <header>[m
+[32m+[m[41m    [m
+[32m+[m[32m        <h1>[m
+[32m+[m[32m            Figuras geometricas[m
+[32m+[m[32m        </h1>[m
+[32m+[m[32m        <p>Primer taller del curso practico de JavasCript</p>[m
+[32m+[m
+[32m+[m[32m    </header>[m
+[32m+[m[41m    [m
+[32m+[m[32m    <section class="section-cuadrado">[m
+[32m+[m
+[32m+[m[32m        <h2>Calcula el area y el perimetro de un cuadrado</h2>[m
+[32m+[m[32m        <form class="formulario">[m
+[32m+[m
+[32m+[m[32m          <label for="InputCuadrado" class="label">[m
+[32m+[m[32m            Escribir cada lado del cuadrado[m
+[32m+[m[32m          </label>[m[41m [m
+[32m+[m
+[32m+[m[32m          <input id="InputCuadrado" type="number"/>[m
+[32m+[m
+[32m+[m[32m          <button type="button" onclick="calcularPerimetroCuadrado()">Calcular perimetro</button>[m
+[32m+[m[32m          <button type="button" onclick="calcularAreaCuadrado()">Calcular area</button>[m
+[32m+[m
+[32m+[m[32m        </form>[m
+[32m+[m
+[32m+[m[32m    </section>[m
+[32m+[m
+[32m+[m[32m    <section class="section-triangulo">[m
+[32m+[m
+[32m+[m[32m        <h2>Calcula el area y el perimetro de un triangulo</h2>[m
+[32m+[m[32m        <form class="formulario">[m
+[32m+[m
+[32m+[m[32m          <label for="InputLado1" class="label">[m
+[32m+[m[32m            Escribir clado 1 del triangulo[m
+[32m+[m[32m          </label>[m[41m [m
+[32m+[m[32m          <input id="InputLado1" type="number"/>[m
+[32m+[m
+[32m+[m[32m          <label for="InputLado2" class="label">[m
+[32m+[m[32m            Escribir clado 2 del triangulo[m
+[32m+[m[32m          </label>[m
+[32m+[m[32m          <input id="InputLado2" type="number"/>[m
+[32m+[m
+[32m+[m[32m          <label for="InputBase" class="label">[m
+[32m+[m[32m            Escribir base del triangulo[m
+[32m+[m[32m          </label>[m
+[32m+[m[32m          <input id="InputBase" type="number"/>[m
+[32m+[m
+[32m+[m[41m          [m
+[32m+[m[32m          <button type="button" onclick="AlturaTriangulo()">Calcular altura</button>[m
+[32m+[m[32m          <button type="button" onclick="calcularPerimetroTriangulo()">Calcular perimetro</button>[m
+[32m+[m[32m          <button type="button" onclick="calcularAreaTriangulo()">Calcular area</button>[m
+[32m+[m
+[32m+[m[32m        </form>[m
+[32m+[m
+[32m+[m[32m    </section>[m
+[32m+[m
+[32m+[m[32m    <section class="section-Circulo">[m
+[32m+[m
+[32m+[m[32m        <h2>Calcula diametro, area y el perimetro de un circulo</h2>[m
+[32m+[m[32m        <form class="formulario">[m
+[32m+[m
+[32m+[m[32m          <label for="InputCirculo" class="label">[m
+[32m+[m[32m            Escribir radio del circulo[m
+[32m+[m[32m          </label>[m[41m [m
+[32m+[m
+[32m+[m[32m          <input id="InputCirculo" type="number"/>[m
+[32m+[m
+[32m+[m[32m          <button type="button" onclick="calcularDiametroCirculo()">Calcular diametro</button>[m
+[32m+[m[32m          <button type="button" onclick="calcularPerimetroCirculo()">Calcular perimetro</button>[m
+[32m+[m[32m          <button type="button" onclick="calcularAreaCirculo()">Calcular area</button>[m
+[32m+[m
+[32m+[m[32m        </form>[m
+[32m+[m
+[32m+[m[32m    </section>[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m    <script src="./figuras.js"></script>[m
+[32m+[m[41m    [m
+[32m+[m[32m</body>[m
+[32m+[m[32m</html>[m
+\ No newline at end of file[m
+[1mdiff --git a/figuras.js b/figuras.js[m
+[1mnew file mode 100644[m
+[1mindex 0000000..1fc8d11[m
+[1m--- /dev/null[m
+[1m+++ b/figuras.js[m
+[36m@@ -0,0 +1,195 @@[m
+[32m+[m
+[32m+[m[32m//********************Codigo del Cuadrado*********************************[m
+[32m+[m[32mconsole.group("Cuadrados")[m
+[32m+[m
+[32m+[m[32mfunction perimetroCuadrado(lado){[m
+[32m+[m
+[32m+[m[32m    return lado * 4;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[32mfunction areacuadrado(lado){[m
+[32m+[m[32m    return lado * lado;[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mconsole.groupEnd()[m
+[32m+[m
+[32m+[m[32m//********************Codigo del Triangulo*********************************[m
+[32m+[m
+[32m+[m[32m console.group("Triangulos")[m
+[32m+[m
+[32m+[m[32mconst LadoTriangulo1 = 6;[m
+[32m+[m[32mconst LadoTriangulo2 = 6;[m
+[32m+[m[32mconst baseTriangulo  = 4;[m
+[32m+[m
+[32m+[m
+[32m+[m[32mconsole.log([m
+[32m+[m[32m    "Los lados del triangulo miden "[m
+[32m+[m[32m    + LadoTriangulo1 + "cm "[m
+[32m+[m[32m    + LadoTriangulo2 + "cm "[m[41m [m
+[32m+[m[32m    + baseTriangulo + "cm "[m
+[32m+[m[32m     );[m[41m [m
+[32m+[m
+[32m+[m
+[32m+[m[32mfunction perimetrotriangulo (lado1, lado2,base){[m
+[32m+[m
+[32m+[m[32m    return lado1+lado2+base[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m[41m [m
+[32m+[m[32mfunction areatriangulo (base,altura){[m
+[32m+[m
+[32m+[m[32m    return (base*altura)/2;[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32mconsole.groupEnd()[m
+[32m+[m
+[32m+[m[32m//********************Codigo del Circulo*********************************[m
+[32m+[m
+[32m+[m[32mconsole.group("Circulos")[m
+[32m+[m
+[32m+[m
+[32m+[m[32mfunction diametroCirculo(radio){[m
+[32m+[m
+[32m+[m[32m    return radio *2[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32m//PI[m
+[32m+[m
+[32m+[m[32mconst PI = Math.PI;[m
+[32m+[m
+[32m+[m[32m//Circunferencia[m
+[32m+[m
+[32m+[m[32mfunction perimetroCirculo (radio){[m
+[32m+[m[32m    const diametro = diametroCirculo(radio)[m
+[32m+[m[32m    return diametro * PI[m
+[32m+[m[41m    [m
+[32m+[m[32m}[m[41m [m
+[32m+[m
+[32m+[m
+[32m+[m[32mfunction areaCirculo (radio){[m
+[32m+[m[41m    [m
+[32m+[m[32m    return (radio* radio)* PI[m
+[32m+[m[41m    [m
+[32m+[m[32m}[m[41m [m
+[32m+[m
+[32m+[m[32mconsole.groupEnd()[m
+[32m+[m
+[32m+[m[32m//*****************Interaccion con el HTML*******************************[m
+[32m+[m
+[32m+[m[32mfunction calcularPerimetroCuadrado (){[m
+[32m+[m[32m   const input= document.getElementById("InputCuadrado");[m
+[32m+[m[32m   const value = input.value;[m
+[32m+[m
+[32m+[m[32m   const perimtetro = perimetroCuadrado(value);[m
+[32m+[m[32m   alert(perimtetro)[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32mfunction calcularAreaCuadrado (){[m
+[32m+[m[32m    const input= document.getElementById("InputCuadrado");[m
+[32m+[m[32m    const value = input.value;[m
+[32m+[m
+[32m+[m[32m   const area = areacuadrado(value);[m
+[32m+[m[32m   alert(area);[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m
+[32m+[m[32mfunction AlturaTriangulo(){[m
+[32m+[m
+[32m+[m[32m    const input1= document.getElementById("InputLado1");[m
+[32m+[m[32m    const input2= document.getElementById("InputLado2");[m
+[32m+[m[32m    const input3= document.getElementById("InputBase");[m
+[32m+[m
+[32m+[m[32m    const lado1 = input1.value[m
+[32m+[m[32m    const lado2 = input2.value[m
+[32m+[m[32m    const base = input3.value[m
+[32m+[m
+[32m+[m[32m    if(lado1 === lado2 && base > 0){[m
+[32m+[m[32m        var  altura = Math.sqrt(Math.pow(lado1,2)-((Math.pow(base,2)/4)))[m
+[32m+[m[32m         alert(altura)[m
+[32m+[m[32m         return altura[m
+[32m+[m
+[32m+[m[32m    }[m
+[32m+[m[32m    else[m[41m [m
+[32m+[m[32m        alert ("No es un triangulo isosceles")[m
+[32m+[m[41m [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfunction calcularAreaTriangulo (){[m
+[32m+[m[32m    const input1= document.getElementById("InputLado1");[m
+[32m+[m[32m    const input2= document.getElementById("InputLado2");[m
+[32m+[m[32m    const input3= document.getElementById("InputBase");[m
+[32m+[m
+[32m+[m[32m    const lado1 = input1.value[m
+[32m+[m[32m    const lado2 = input2.value[m
+[32m+[m[32m    const base = input3.value[m
+[32m+[m
+[32m+[m[32m    const altura = AlturaTriangulo()[m
+[32m+[m[32m    //console.log("altura"+altura)[m
+[32m+[m
+[32m+[m[32m   const area = areatriangulo(base, altura)[m
+[32m+[m[32m   alert(area);[m
+[32m+[m[32m   return area[m
+[32m+[m[41m  [m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfunction calcularPerimetroTriangulo(){[m
+[32m+[m
+[32m+[m[32m    const input1= document.getElementById("InputLado1");[m
+[32m+[m[32m    const input2= document.getElementById("InputLado2");[m
+[32m+[m[32m    const input3= document.getElementById("InputBase");[m
+[32m+[m
+[32m+[m[32m    const lado1 =parseInt(input1.value)[m[41m [m
+[32m+[m[32m    const lado2 = parseInt(input2.value)[m[41m [m
+[32m+[m[32m    const base = parseInt(input3.value)[m[41m [m
+[32m+[m
+[32m+[m[32m    const perimetro = perimetrotriangulo(lado1,lado2,base)[m
+[32m+[m[41m    [m
+[32m+[m[32m    alert(perimetro)[m
+[32m+[m[41m    [m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32mfunction calcularDiametroCirculo(){[m
+[32m+[m
+[32m+[m[32m    const input1 = document.getElementById("InputCirculo");[m
+[32m+[m[32m    const radio = input1.value[m
+[32m+[m
+[32m+[m[32m    diametro = diametroCirculo(radio);[m
+[32m+[m
+[32m+[m[32m    alert (diametro)[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m[32mfunction calcularPerimetroCirculo(){[m
+[32m+[m[32m    const input1 = document.getElementById("InputCirculo");[m
+[32m+[m[32m    const radio = input1.value[m
+[32m+[m
+[32m+[m[32m    const perimetro = perimetroCirculo(radio);[m
+[32m+[m
+[32m+[m[32m    alert (perimetro)[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m[32mfunction calcularAreaCirculo(){[m
+[32m+[m[32m    const input1 = document.getElementById("InputCirculo");[m
+[32m+[m[32m    const radio = input1.value[m
+[32m+[m
+[32m+[m[32m    const area = areaCirculo(radio);[m
+[32m+[m
+[32m+[m[32m    alert (area)[m
+[32m+[m
+[32m+[m[32m}[m
+[32m+[m
+[32m+[m
+[32m+[m

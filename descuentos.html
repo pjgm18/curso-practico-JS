@@ -5,9 +5,59 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Porcentajes y descuentos</title>
+    <style>
+        .section-descuento{
+
+            display: grid;
+            grid-template-rows: auto 1fr auto ;
+            width: 300px;
+            justify-items: center;
+
+
+        }
+        form{
+            display: flex;
+            flex-direction: column;
+        }
+        .descuento{
+
+            display: grid;
+            place-items: center;
+        }
+
+    </style>
 </head>
 <body>
-    <h1>Porcentajes y descuentos</h1>
+
+    <header style="text-align: center;">
+        <h1>Porcentajes y descuentos</h1>
+    </header>
+    <p style="text-align: center;">Segundo taller del curso práctico de JavaScript</p>
+
+    <div class="descuento">
+
+        <section class="section-descuento">
+
+            <h2> Calcula el precio a pagar de tus productos</h2>
+    
+            <form class="form">
+    
+                <label for="InputPrice">Escribe el precio de tu producto</label>
+                <input id="InputPrice">
+    
+                <label for="InputCoupon">Escribe el descuento de tu producto</label>
+                <input id="InputCoupon" type="text">
+                
+                <button type="button" onclick="onClickButtonPriceDiscount()">Calcular precio</button>
+
+                <p id="ResultP"></p>
+    
+            </form>
+    
+        </section>
+
+    </div>
+    
 
     <script src="./descuentos.js"></script>
 </body>
