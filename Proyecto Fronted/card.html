@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet"><link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300;500;700&display=swap" rel="stylesheet">
+    
+       
+
+    <style>
+         :root{
+            --white: #ffffff;
+            --black: #000000;
+            --very-light-pink:  #C7C7C7;
+            --text-input-field: #f7f7f7;
+            --hospital-green:   #ACD9B2;
+            --sm: 14px;
+            --md: 10px;
+            --lg: 18px;
+
+
+
+
+       }
+        body{
+            margin: 0;
+            font-family: 'Quicksand', sans-serif;
+        }
+
+       section{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+           
+        } 
+
+        .card{
+            display: grid;
+            justify-items: center;
+            width: 500px;
+            height: 100vh;
+            border-radius: 15px 15px 0 0;
+
+         
+        }
+        
+        .foto-portada{
+            background-image: url(https://images.pexels.com/photos/6018498/pexels-photo-6018498.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500) ;
+           
+            width: 100%;
+            height: 250px;
+            border-radius: 15px 15px 0 0;
+            object-fit: cover;
+
+            
+            
+            
+        }
+        .foto-portada img{
+            width: 300px;
+            height:100px;
+             object-fit: cover;
+             position: absolute;
+           
+
+           
+            
+            
+        }
+        .foto-perfil {
+            
+            display: flex;
+            justify-content: center;
+            width: 110px;
+            height: 110px;
+            border-radius: 150px;
+            position: relative;
+            overflow: hidden;
+            background-color: white;
+            left: 40%;
+            top: 75%;
+
+        }
+
+        .foto-perfil img{
+            width: 100px;
+            height: 100px;
+            border-radius: 50%;
+            object-fit: cover;
+            margin-top: 5px;
+
+           
+            
+
+        
+        }
+        .nombre h1{
+            margin-bottom: 0;
+            text-align: center;
+
+        }
+        .nombre h4{
+            margin-top: 0;
+            text-align: center;
+            font-weight: lighter;
+        }
+        .contacto{
+            display: flex; 
+            width: 100%; 
+            height: 70px;
+           
+           /*  align-items: center;
+            justify-content: space-between; */
+        }
+        .contacto >div{
+            width: 100%;
+        }
+        .contacto >div >div{
+            display: flex;
+            justify-content: center;
+        }
+        .contacto figure{
+            margin-right: 5px;
+        }
+        
+        
+        .contacto figure img{
+            width: 25px;
+            height: 25px;
+           
+        }
+        .contacto p{
+            font-weight: bold;
+        }
+        .seguidoress{
+            display: flex;
+            width: 100%;
+            
+          
+           
+        }
+        .seguidoress > div{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 80px;
+            background-color: rgb(239, 255, 196);
+            border: solid 1px rgb(171, 201, 193) ;
+            border-bottom: 0;
+            text-align: center;
+        }
+        .seguidoress div p{
+           margin: 0;
+        }
+        .seguidoress div >div :nth-child(1){
+           font-weight: bold;
+        }
+        .button{
+            width: 100%;
+            height: 50px;
+            border: none;
+            background-color: rgb(49, 175, 122);
+            border-radius: 0px 0px 8px 8px
+        }
+       
+
+    </style>
+
+</head>
+<body>
+    <section>
+      <div class="card">
+          <div class="foto-portada">
+            
+            <div class="foto-perfil">
+            <img src="https://images.pexels.com/photos/10196911/pexels-photo-10196911.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500" alt="">
+
+        </div>
+        </div>
+          
+        
+        
+        <div class="nombre">
+            <h1>Pedro Guerrero</h1>
+            <h4>Frontend Developer</h4>
+        </div>
+        <div class="contacto">
+            <div>
+                    <div>
+                    <figure>
+                        <img src="https://cdn-icons-png.flaticon.com/128/2258/2258541.png" alt="">
+                    </figure>
+                    <div>
+                        <p>Email</p>
+                    </div>
+                
+                    
+                </div>
+            </div>
+            
+            <div>
+                <div>
+                <figure>
+                    <img src="https://cdn-icons.flaticon.com/png/512/3082/premium/3082383.png?token=exp=1644419348~hmac=10cbcc5a15a6aa34a2547a9f0063bffb" alt="">
+                </figure>
+                <div>
+                    <p>colombia</p>
+                </div>
+            </div>
+            
+                
+                
+            </div>
+            
+        </div>
+        <div style="width: 100%;">
+            <div class="seguidoress">
+            <div>
+                <div>
+                <p>8000</p>
+                <p>Seguidores</p>
+                
+                </div>
+                
+            </div>
+            <div>
+                     <div>
+                        <p>500</p>
+                    <p>Seguidos</p>
+                    
+                    </div>
+            </div>
+        </div>
+        <button class="button">Follow</button>
+        </div>
+        
+    </div>
+   
+    </section>
+</body>
+</html>
